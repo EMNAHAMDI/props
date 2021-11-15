@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React from 'react'
+import Prof from'./Profile/component/profile.js'
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
 
-export default App;
+function App() {
+  
+    const handleClick = (x )=> {
+  
+      alert("the name of the profile user is"+x);
+    };
+   
+    return (
+      <div className="App">
+        <Prof    handleClick={handleClick}
+         fullname="Hamdi Emna" bio="Real" 
+         profession="Administrateur réseau">
+           <img src="./profile/component/ profile/telechargement.jpg" alt="photo"></img></Prof>
+      </div>
+    );
+  }
+  
+  export default App;
+  
